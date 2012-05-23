@@ -10,16 +10,20 @@ Make:
 
 Jars are created in the target folder.
 
-    * Executable jar examples-maven-0.0.1-SNAPSHOT.jar
-    * Sources examples-maven-0.0.1-SNAPSHOT-sources.jar
-    * Test sources examples-maven-0.0.1-SNAPSHOT-test-sources.jar
-    * Test classes examples-maven-0.0.1-SNAPSHOT-tests.jar
+* Executable jar 
+        target/examples-maven-0.0.1-SNAPSHOT.jar
+* Sources 
+        target/examples-maven-0.0.1-SNAPSHOT-sources.jar
+* Test sources 
+        target/examples-maven-0.0.1-SNAPSHOT-test-sources.jar
+* Test classes 
+        target/examples-maven-0.0.1-SNAPSHOT-tests.jar
     
 
 Run 
 --------------
 
-    java -jar examples-maven-0.0.1-SNAPSHOT.jar arg1 arg2 arg3
+    java -jar target/examples-maven-0.0.1-SNAPSHOT.jar arg1 arg2 arg3
 
 Create web site:
 --------------
