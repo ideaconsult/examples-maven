@@ -2,9 +2,9 @@ package net.idea.examples.examples_maven;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-/**
- * 
- */
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import net.idea.examples.examples_maven.MainApp._option;
 
 /**
@@ -13,6 +13,7 @@ import net.idea.examples.examples_maven.MainApp._option;
  *
  */
 public class BreadWinner {
+	private final static Logger LOGGER = Logger.getLogger(BreadWinner.class.getName());
 	protected File file;
 	/**
 	 * 
@@ -40,12 +41,15 @@ public class BreadWinner {
 		case file: {
 			if ((argument==null) || "".equals(argument.trim())) return;
 			setFile(new File(argument));
+			break;
 		}
-		default: 
+		default: {
+			LOGGER.log(Level.INFO, String.format("Unsupported option %s %s ",option,argument));
+		}
 		}
 	}
 	/**
-	 * 
+	 * TODO Do something real here
 	 * @return
 	 * @throws Exception
 	 */

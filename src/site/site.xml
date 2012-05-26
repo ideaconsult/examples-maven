@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="AMBIT2">
+
+  <bannerLeft>
+    <name>examples-cdk</name>
+    <src>./images/ideaconsult_80.png</src>
+    <href>./index.html</href>
+  </bannerLeft>
+  <bannerRight>
+    <src></src>
+  </bannerRight>
+ 
+  <body>
+  <menu name="CDK-Maven example">
+      <item name="Home" href="/index.html"/>
+    </menu>
+
+    <menu ref="reports"/>
+
+  </body>
+  <poweredBy>
+  
+  </poweredBy>    
+  <publishDate position="navigation-bottom" format="MM-dd-yy"/>
+
+   <skin>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>1.2.1</version>
+    </skin>  
+    
+     <custom>
+    <fluidoSkin>
+      <searchEnabled>true</searchEnabled>
+      <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
+      <topBarEnabled>false</topBarEnabled>
+      <topBarIcon>
+      <name>examples-maven</name>
+      <alt>examples-maven</alt>
+      <src>./images/ideaconsult_80.png</src>
+      <href>./index.html</href>
+      </topBarIcon>
+
+	  <googleSearch>
+        <sitesearch>http://ideaconsult.github.com/examples-cdk</sitesearch>
+      </googleSearch>
+
+      <sideBarEnabled>true</sideBarEnabled>
+
+       <gitHub>
+        <projectId>ideaconsult/examples-cdk</projectId>
+        <ribbonOrientation>right</ribbonOrientation>
+        <ribbonColor>black</ribbonColor>
+      </gitHub>
+       
+    </fluidoSkin>
+ 
+  </custom>
+
+</project>

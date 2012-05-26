@@ -80,7 +80,7 @@ public class MainApp {
     	return options;
 	}
 	/**
-	 * 
+	 * TODO Add more options
 	 * @author nina
 	 *
 	 */
@@ -151,7 +151,7 @@ public class MainApp {
 	 */
 	protected static String example1() {
 		return String.format(
-		"Read file : \tjava -jar %s\t-f filename\n",
+		"Read file : \tjava -jar %s\t-f filename%n",
 		"examples-maven-0.0.1-SNAPSHOT.jar"
 		);
 
