@@ -34,6 +34,10 @@
   		<version>1.1</version>
   	</dependency>   
   </dependencies>
+  <organization>
+  	<name>IdeaConsult Ltd.</name>
+  	<url>http://ideaconsult.net</url>
+  </organization>
   <build>
     <resources>
       <resource>
@@ -43,31 +47,6 @@
     </resources>
     <plugins>
       <!-- Create executable jar with all dependencies included  -->
-      <plugin>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <version>2.2-beta-2</version>
-        <executions>
-          <execution>
-            <id>create-executable-jar</id>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-            <configuration>
-              <descriptorRefs>
-                <descriptorRef>
-								jar-with-dependencies
-								</descriptorRef>
-              </descriptorRefs>
-              <finalName>examples-maven-${project.version}</finalName>
-              <appendAssemblyId>false</appendAssemblyId>
-              <archive>
-                <manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>
-              </archive>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
       <!-- Create jar with source code -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -93,6 +72,16 @@
           </execution>
         </executions>
       </plugin>
+		<!-- used for site generation via mvn site:site -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <locales>en</locales>
+        </configuration>
+      </plugin>
+     
     </plugins>
     <pluginManagement>
       <plugins>
@@ -151,14 +140,32 @@
   <licenses>
     <license>
       <name>LGPL3</name>
-      <url>http://www.gnu.org/licenses/lgpl.html</url>
+      <url>http://www.gnu.org/licenses/lgpl.txt</url>
       <distribution>repo</distribution>
       <comments>LGPL 3</comments>
     </license>
   </licenses>
-  <reporting>
+ <reporting>
     <plugins>
-      <!-- Javadoc -->
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>2.4</version>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>license</report>
+              <report>issue-tracking</report>
+              <report>project-team</report>
+              <report>scm</report>
+              <report>dependencies</report>
+              <report>distribution-management</report>
+			  <report> dependency-convergence</report>
+              <report>summary</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
       <plugin>
         <!-- UML class diagrams  -->
         <groupId>org.apache.maven.plugins</groupId>
@@ -187,37 +194,50 @@
 	          </additionalparam>
         </configuration>
       </plugin>
-      <!-- PMD code analysis http://maven.apache.org/plugins/maven-pmd-plugin/  -->
-      <plugin>
+          <plugin>
+          	<groupId>org.codehaus.mojo</groupId>
+          	<artifactId>taglist-maven-plugin</artifactId>
+			<configuration>
+				<tags>
+					<tag>TODO</tag>
+					<tag>@todo</tag>
+					<tag>FIXME</tag>
+				</tags>
+			</configuration>          	
+          </plugin>
+
+          <plugin>
+          	<groupId>org.codehaus.mojo</groupId>
+          	<artifactId>jdepend-maven-plugin</artifactId>
+          </plugin>
+       
+          <plugin>
+          	<groupId>org.codehaus.mojo</groupId>
+          	<artifactId>cobertura-maven-plugin</artifactId>
+          </plugin>
+	    <plugin>
+	      <groupId>org.codehaus.mojo</groupId>
+	      <artifactId>findbugs-maven-plugin</artifactId>
+	      <configuration>
+	        <xmlOutput>false</xmlOutput>
+	        <effort>Max</effort>
+	      </configuration>
+	    </plugin>
+	  <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-pmd-plugin</artifactId>
-        <version>2.4</version>
-        <configuration>
-          <linkXref>false</linkXref>
-          <sourceEncoding>utf-8</sourceEncoding>
-          <minimumTokens>100</minimumTokens>
-          <targetJdk>
-					1.5
-				</targetJdk>
-          <excludes>
-            <exclude>*/generated/.java</exclude>
-          </excludes>
-        </configuration>
+        <version>2.7.1</version>
       </plugin>
-      <!--  metrics report  -->
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>jdepend-maven-plugin</artifactId>
-        <version>2.0-beta-2</version>
-      </plugin>
-      <!-- Generate Javadoc jars -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <configuration>
-          <aggregate>true</aggregate>
-        </configuration>
-      </plugin>
+
+      <!-- Develop our own rules or follow foreign ones ... 
+          <plugin>
+          	<groupId>org.apache.maven.plugins</groupId>
+          	<artifactId>maven-checkstyle-plugin</artifactId>
+          	<configuration>
+				<configLocation>config/maven_checks.xml</configLocation>
+			</configuration>
+          </plugin>
+	-->
     </plugins>
   </reporting>
   <profiles>
