@@ -1,7 +1,7 @@
 examples-maven
 ==============
 
-Simple example of an Apache Maven project
+Simple example of an  [Apache Maven](http://maven.apache.org/ "Apache Maven") project.
 
 Make:
 --------------
