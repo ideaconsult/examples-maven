@@ -1,0 +1,32 @@
+ -----
+ Simple Maven Project example
+ -----
+ Background
+ -----
+ May 2012
+
+Simple Maven Project example
+~~~~~~~  
+  
+   This is a simple example of a {{{http://maven.apache.org} Apache Maven}} Java project, with a single dependency defined. 
+  
+  
+   * Fork it.
+   
+   * Get {{{http://maven.apache.org} Apache Maven}}
+      
+   * Build 
+   
+--------------------
+
+   mvn install
+   
+--------------------   
+   
+   * Run 
+   
+--------------------   
+   
+      java -jar target/examples-maven-0.0.1-SNAPSHOT.jar -f file_name
+   
+--------------------      

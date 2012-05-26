@@ -59,4 +59,12 @@ public class BreadWinner {
 		System.out.println(file.getAbsolutePath());
 		return 0;
 	}
+	
+	/**
+	 * TODO Close relevant resources
+	 * @throws Exception
+	 */
+	public void cleanUp() throws Exception {
+		LOGGER.log(Level.FINEST, "Clean up");
+	}
 }

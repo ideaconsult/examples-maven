@@ -2,7 +2,7 @@
 <project name="AMBIT2">
 
   <bannerLeft>
-    <name>examples-cdk</name>
+    <name>examples-maven</name>
     <src>./images/ideaconsult_80.png</src>
     <href>./index.html</href>
   </bannerLeft>
@@ -11,7 +11,7 @@
   </bannerRight>
  
   <body>
-  <menu name="CDK-Maven example">
+  <menu name="Simple Maven example">
       <item name="Home" href="/index.html"/>
     </menu>
 
@@ -42,13 +42,13 @@
       </topBarIcon>
 
 	  <googleSearch>
-        <sitesearch>http://ideaconsult.github.com/examples-cdk</sitesearch>
+        <sitesearch>http://ideaconsult.github.com/examples-maven</sitesearch>
       </googleSearch>
 
       <sideBarEnabled>true</sideBarEnabled>
 
        <gitHub>
-        <projectId>ideaconsult/examples-cdk</projectId>
+        <projectId>ideaconsult/examples-maven</projectId>
         <ribbonOrientation>right</ribbonOrientation>
         <ribbonColor>black</ribbonColor>
       </gitHub>

@@ -23,7 +23,7 @@ Jars are created in the target folder.
 Run 
 --------------
 
-    java -jar target/examples-maven-0.0.1-SNAPSHOT.jar arg1 arg2 arg3
+    java -jar target/examples-maven-0.0.1-SNAPSHOT.jar -f file_name
 
 Create web site:
 --------------

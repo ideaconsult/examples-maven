@@ -47,6 +47,7 @@ public class MainApp {
 		} finally {
 			try { 
 				//run whatever cleanup is needed
+				worker.cleanUp();
 			} catch (Exception xx) {
 				printHelp(options,xx.getMessage());
 			}
