@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<project name="AMBIT2">
+<project name="IdeaConsult code examples set">
 
   <bannerLeft>
     <name>examples-maven</name>
@@ -29,6 +29,16 @@
 </script>
       <!-- Google Analytics - End -->    
   </head>
+    <links>
+
+      <item name="examples-opentox" href="http://ideaconsult.github.com/examples-opentox"/>
+      <item name="examples-ambit" href="http://ideaconsult.github.com/examples-ambit"/>
+      <item name="examples-cdk" href="http://ideaconsult.github.com/examples-cdk"/>
+      <item name="examples-toxtree" href="http://ideaconsult.github.com/examples-toxtree"/>
+      <item name="examples-maven" href="http://ideaconsult.github.com/examples-maven"/>
+
+    </links>
+      
   <menu name="Simple Maven example">
       <item name="Home" href="/index.html"/>
     </menu>
